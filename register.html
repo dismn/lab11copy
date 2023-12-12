@@ -11,11 +11,14 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            height: 100vh;
         }
 
        .header{
         display: flex;
         justify-content: space-between;
+
+        margin-bottom: 10px;
 
         background-color: rgb(88, 173, 247);
         width: 100%;
@@ -41,17 +44,59 @@
         }
 
 
+        .title {
+            background-color: rgb(73, 134, 248);
+            width: 100%;
+            text-align: center;
+        }
+
+        h3 {
+            color: #fff;
+        }
+
+
+        .main {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+            margin: 0 auto;
+
+            width: 30vw;
+            background-color: #fff;
+            border: 2px solid #9c9c9c;
+        }
+
+        button {
+            margin-left: 5px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            width: 100vw;
+            height: 20vh;
+            margin-top: 10px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer-text {
+            padding-top: 30px;
+        }
+
+
     </style>
 
     <div class="header">
         <h2>Мій особистий блог</h2>
         <div class="links">
         <a href="#">Вхід</a>
-        <a href="#">Реєстрація</a>
+        <a href="./index2.html">Реєстрація</a>
         </div>
     </div>
 
-    <div>
+    <div  class="main">
         <div class="title">
             <h3>Реєстрація користувача</h3>
         </div>
@@ -80,7 +125,12 @@
           <input type="password">
 
           <button>Зареєструватися</button>
+
         </form>
+    </div>
+
+    <div class="footer">
+        <p class="footer-text">@Всі права захищені</p>
     </div>
 
 
