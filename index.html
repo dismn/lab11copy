@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 11</title>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, html {
+            margin: 0;
+            height: 100%;
+        }
+        .wrapper {
+            height: 100vh;
+            padding: 5px;
+        }
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: 3px;
+            grid-row-gap: 3px;
+            grid-template-areas:
+            "item-1 item-1 item-1 item-2"
+            "item-3 item-4 item-5 item-2"
+            "item-6 item-6 item-5 item-2"
+            "item-7 item-7 item-7 item-7";
+        }
+
+.blue {
+    background-color: #5B9BD5;
+    grid-area: item-1;
+}
+.dark-grey {
+    background-color: #6E7D82;
+    grid-area: item-2;
+}
+.light-blue {
+    background-color: #5BD1D1;
+    grid-area: item-3;
+}
+.red {
+    background-color: #e57373;
+    grid-area: item-4;
+}
+.yellow {
+    background-color: #FFC000;
+    grid-area: item-5;
+}
+.green {
+    background-color: #31A475;
+    grid-area: item-6;
+}
+.orange {
+    background-color: #C55A11;
+    grid-area: item-7;
+}
+
+        @media screen and (max-width: 1200px) {
+            .parent {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                grid-template-areas:
+                    "item-1 item-1 item-2"
+                    "item-3 item-4 item-2"
+                    "item-5 item-5 item-2"
+                    "item-6 item-6 item-2"
+                    "item-7 item-7 item-7";
+            }
+        }
+        @media screen and (max-width: 950px) {
+            .parent {
+                grid-template-columns: 70% 30%;
+                grid-template-rows: repeat(6, 1fr);
+                grid-template-areas:
+                    "item-1 item-2"
+                    "item-4 item-2"
+                    "item-5 item-2"
+                    "item-6 item-2"
+                    "item-5 item-2"
+                    "item-7 item-7";
+            }
+        }
+        @media screen and (max-width: 750px) {
+            .parent {
+                grid-template-columns: 1fr;
+                grid-template-rows: unset;
+                grid-template-areas: unset;
+            }
+            .block {
+                grid-area: unset;
+            }
+        }
+    </style>
+<div class="wrapper parent">
+    <div class="block blue"></div>
+    <div class="block light-blue"></div>
+    <div class="block red"></div>
+    <div class="block green"></div>
+    <div class="block yellow"></div>
+    <div class="block dark-grey"></div>
+    <div class="block orange"></div>
+</div>
+</body>
+</html>
