@@ -16,13 +16,15 @@
     </div>
 
     <div class="main">
+        <div class="block-1">
         <h3>Create a repository</h3>
         <p>From scratch - Create a new local repository</p>
         <p><b>$ git init [project name]</b></p>
         <p>Download from an existing repository</p>
         <p><b>$ git clone my_url</b></p>
+        </div>
 
-
+        <div class="block-2">
         <h3>Observe your repository</h3>
         <p>List new or modified files not yet commited</p>
         <p><b>$ git status</b></p>
@@ -42,8 +44,10 @@
         <p><b>$ git log</b></p>
         <p>Show change history for file/directory including diffs</p>
         <p><b>$ git log -p [file/directory]</b></p>
+        </div>
 
 
+        <div class="block-3">
         <h3>Working with Branches</h3>
         <p>List all local branches</p>
         <p><b>$ git branch</b></p>
@@ -60,7 +64,9 @@
         <p><b>$ git merge branch_b</b></p>
         <p>Tag the current commit</p>
         <p><b>$ git tag my_tag</b></p>
+        </div>
 
+        <div class="block-4">
         <h3>Make a change</h3>
         <p>Stages the file, ready for commit</p>
         <p><b>$ git add [file]</b></p>
@@ -74,7 +80,9 @@
         <p><b>$ git reset [file]</b></p>
         <p>Revert everything to the last commit</p>
         <p><b>$ git reset --hard</b></p>
+        </div>
 
+        <div class="block-5">
         <h3>Synhronize</h3>
         <p>Get the latest changes from origin (no merge)</p>
         <p><b>$ git fatch</b></p>
@@ -84,13 +92,13 @@
         <p><b>$ git pull --rebase</b></p>
         <p>Push local changes to the origin </p>
         <p><b>$ git push</b></p>
+        </div>
 
-        <p>Finally!</p>
+        <div class="block-7">
+        <h3>Finally!</h3>
         <p>When it doubt, use git help</p>
         <p><b>$ git  command --help</b></p>
-
-
-
+        </div>
     </div>
 
     <style>
@@ -114,10 +122,13 @@
     }
 
     h2 {
-        color: #000;
+        color: #000000;
         margin: 20px 20px;
     }
 
+    h3 {
+        color: #43db55;
+    }
     .links {
         margin: 20px 20px;
     }
@@ -129,6 +140,15 @@
         font-size: 20px;
         margin: 10px;
     }
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+
+
 
     .footer {
             width: 100vw;
